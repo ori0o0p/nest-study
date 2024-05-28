@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
-@Schema()
+@Schema({ versionKey: false })
 export class Article {
   @Prop()
   title: string;
@@ -8,4 +8,4 @@ export class Article {
   content: string;
 }
 
-export const ArticleSchema = SchemaFactory.createForClass(Article)
+export const ArticleSchema = SchemaFactory.createForClass(Article);
